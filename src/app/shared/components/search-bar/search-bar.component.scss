@@ -1,0 +1,33 @@
+@import"../../../../styles/variables.scss";
+
+.search-bar-component-container {
+    @include center-flex();
+
+    .search-bar-icon-container {
+        @include center-flex();
+        background-color: $crayola;
+        border: 2px solid $crayola;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        width: 30px;
+        height: 35px;
+
+        .search-bar-icon {
+            font-size: 1rem;
+            color: $white;
+        }
+    }
+
+    .search-bar-input{
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 0;
+        padding-left: 5px;
+        height: 35px;
+        width: 200px;
+
+        &:focus-visible {
+            outline: 0;
+        }
+    }
+}
