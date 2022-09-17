@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ArtistSearchComponent } from './components/artist-search/artist-search.component';
 import { ArtistsRoutingModule } from './artists-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -13,7 +14,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ArtistsRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ]
 })
 export class ArtistsModule { }

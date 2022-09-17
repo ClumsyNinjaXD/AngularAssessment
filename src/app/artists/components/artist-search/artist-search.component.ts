@@ -9,14 +9,17 @@ import { IArtist } from '../../services/data/artist';
 })
 export class ArtistSearchComponent implements OnInit {
   public searchResults: IArtist[] = [];
+  public isSearching = false;
 
   constructor(private artistsService: ArtistsService) { }
 
   public ngOnInit(): void {
   }
 
-  public searchTermChanged(newValue: string): void {
-    this.searchResults = this.artistsService.getSearchResults(newValue);
+  public async searchTermChanged(newValue: string): Promise<void> {
+    this.isSearching = true;
+    this.searchResults = await this.artistsService.getSearchResults(newValue);
+    this.isSearching = false;
   }
 
 }

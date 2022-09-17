@@ -2,7 +2,12 @@
 @import"styles/variables.scss";
 @import '~font-awesome/css/font-awesome.css';
 
-.body {
+body {
     color: $crayola;
     font-size: 14px;
+    background: url('assets/images/background.jpg') no-repeat center center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
 }

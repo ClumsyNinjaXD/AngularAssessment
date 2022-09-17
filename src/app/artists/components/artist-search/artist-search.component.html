@@ -1,3 +1,4 @@
 <div class="artists-search-container">
     <app-search-bar (searchTermChanged)="searchTermChanged($event)"></app-search-bar>
+    <app-loading-spinner *ngIf="isSearching"></app-loading-spinner>
 </div>
