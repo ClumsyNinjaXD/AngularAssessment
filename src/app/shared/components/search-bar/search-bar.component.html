@@ -2,5 +2,5 @@
     <div class="search-bar-icon-container">
         <i class="fa fa-search search-bar-icon"></i>
     </div>
-   <input type="text" class="search-bar-input" [(ngModel)]="searchTerm" (input)="updateSearchTerm()" placeholder="Search for any artist"  />
+   <input type="text" class="search-bar-input" [(ngModel)]="searchTerm" (ngModelChange)="searchModelChanged.next($event)" placeholder="Search for any artist"  />
 </div>

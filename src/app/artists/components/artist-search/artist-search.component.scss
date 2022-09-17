@@ -1,5 +1,13 @@
 @import"../../../../styles/variables.scss";
 
 .artists-search-container {
-    @include center-flex();
+    @include center-flex(column);
+
+    .result-tiles-container {
+        @include center-flex();
+        flex-wrap: wrap;
+        margin-top: 15px;
+        width: 90%;
+        margin: 0 auto;
+    }
 }

@@ -21,10 +21,12 @@ export class ArtistsService {
 
  public async compileArtistsFromSearch(results: ISearchResult[]): Promise<IArtist[]> {
     const artists: IArtist[] = [];
-      // extract all the artist id's and get the detailed artist info
     for (const result of results) {
-        const artistDetails = await this.httpClient.get<IArtist>('/api/artist/' + result.artist.id).toPromise();
-        artists.push(artistDetails);
+      // extract all the unique artist id's and get the detailed artist info
+        if (!artists.some((artist) => artist.id === result.artist.id)) {
+          const artistDetails = await this.httpClient.get<IArtist>('/api/artist/' + result.artist.id).toPromise();
+          artists.push(artistDetails);
+        }
     }
 
     return artists;

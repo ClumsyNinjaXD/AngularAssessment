@@ -1,1 +1,8 @@
-<p>search-result-tile works!</p>
+<div *ngIf="artist" class="search-result-tile-container">
+    <img [src]="artist.picture_medium" class="artist-picture" />
+    <div class="search-tile-content-container">
+        <h2>{{artist.name}}</h2>
+        <p>{{artist.nb_fan}}</p>
+        <p>{{artist.nb_album}}</p>
+    </div>
+</div>
