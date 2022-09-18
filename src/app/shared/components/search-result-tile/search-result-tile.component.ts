@@ -13,4 +13,17 @@ export class SearchResultTileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public getFormattedFanNumber(numberOfFans: number | undefined): string {
+    if (numberOfFans == null) {
+      return '0';
+    } else if (numberOfFans >= 1000000000) {
+       return (numberOfFans / 1000000000).toFixed(1).replace(/\.0$/, '') + 'G';
+    } else if (numberOfFans >= 1000000) {
+       return (numberOfFans / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    } else if (numberOfFans >= 1000) {
+       return (numberOfFans / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    }
+    return numberOfFans.toString();
+}
+
 }

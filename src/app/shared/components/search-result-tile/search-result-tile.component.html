@@ -2,7 +2,9 @@
     <img [src]="artist.picture_medium" class="artist-picture" />
     <div class="search-tile-content-container">
         <h2>{{artist.name}}</h2>
-        <p>{{artist.nb_fan}}</p>
-        <p>{{artist.nb_album}}</p>
+        <div class="tile-info-items">
+            <p class="tile-info-item"><i class="fa fa-users" aria-hidden="true"></i>{{getFormattedFanNumber(artist.nb_fan)}} fans</p>
+            <p class="tile-info-item"><i class="fa fa-folder-open" aria-hidden="true"></i>{{artist.nb_album}} albums</p>
+        </div>
     </div>
 </div>

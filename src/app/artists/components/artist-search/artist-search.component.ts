@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ArtistsService } from '../../services/artists.service';
 import { IArtist } from '../../services/data/artist';
 
@@ -11,7 +12,7 @@ export class ArtistSearchComponent implements OnInit {
   public searchResults: IArtist[] = [];
   public isSearching = false;
 
-  constructor(private artistsService: ArtistsService) { }
+  constructor(private artistsService: ArtistsService, private router:Router) { }
 
   public ngOnInit(): void {
   }
@@ -20,6 +21,10 @@ export class ArtistSearchComponent implements OnInit {
     this.isSearching = true;
     this.searchResults = await this.artistsService.getSearchResults(newValue);
     this.isSearching = false;
+  }
+
+  public async artistSelected(artistId: number): Promise<void> {
+    await this.router.navigate(['/artists/details', artistId]);
   }
 
 }

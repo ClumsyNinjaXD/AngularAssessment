@@ -1,0 +1,29 @@
+@import"../../../../styles/variables.scss";
+
+.artist-detailed-view-container {
+    @include center-flex(column);
+
+    .no-details-found-container {
+        @include center-flex(column);
+    }
+
+    .artist-details-container {
+        @include center-flex(column);
+
+        .artist-top-level-information {
+            @include center-flex(row, space-between);
+
+            .search-tile-content-container {
+                @include center-flex(column);
+
+                .top-track-container {
+                    @include center-flex(column);
+
+                    .top-track {
+                        @include center-flex(row, space-between);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import"styles/variables.scss";
+@import"styles/fonts.scss";
 @import '~font-awesome/css/font-awesome.css';
 
 body {
-    color: $crayola;
+    color: $white;
     font-size: 14px;
+    font-family: Arial,sans-serif;
     background: url('assets/images/background.jpg') no-repeat center center;
     width: 100vw;
     height: 100vh;
@@ -12,4 +14,15 @@ body {
     margin: 0;
     overflow-y: auto;
     background-size: cover;
+}
+
+h1 {
+    font-family: brightness;
+    font-size: 4rem;
+}
+
+h2 {
+    margin: 15px 10px;
+    font-size: 1.1rem;
+    text-align: center;
 }

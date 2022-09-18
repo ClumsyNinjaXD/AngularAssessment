@@ -1,7 +1,7 @@
 import { SearchIdentifierType } from './search-result';
 
 export interface IArtist {
-    id: string;
+    id: number;
     name: string;
     link: string;
     picture: string;

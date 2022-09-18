@@ -1,9 +1,8 @@
 <div class="artists-search-container">
+    <h1>Tune Finder</h1>
     <app-search-bar (searchTermChanged)="searchTermChanged($event)"></app-search-bar>
-    <app-loading-spinner *ngIf="isSearching"></app-loading-spinner>
-    <div *ngIf="!isSearching" class="result-tiles-container">
-        <app-search-result-tile *ngFor="let result of searchResults" [artist]="result"></app-search-result-tile>
+    <app-loading-spinner *ngIf="isSearching" class="loading-spinner-container"></app-loading-spinner>
+    <div *ngIf="!isSearching && searchResults.length > 0" class="result-tiles-container">
+        <app-search-result-tile *ngFor="let result of searchResults" [artist]="result" (click)="artistSelected(result.id)"></app-search-result-tile>
     </div>
-    <h1>PLEASE NOTE THIS IS NOT MY SUBMISSION</h1>
-    <h2>Submission will be made via github repo and email</h2>
 </div>

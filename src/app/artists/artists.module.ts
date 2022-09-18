@@ -4,12 +4,14 @@ import { ArtistSearchComponent } from './components/artist-search/artist-search.
 import { ArtistsRoutingModule } from './artists-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ArtistDetailedViewComponent } from './components/artist-detailed-view/artist-detailed-view.component';
 
 
 
 @NgModule({
   declarations: [
-    ArtistSearchComponent
+    ArtistSearchComponent,
+    ArtistDetailedViewComponent
   ],
   imports: [
     CommonModule,

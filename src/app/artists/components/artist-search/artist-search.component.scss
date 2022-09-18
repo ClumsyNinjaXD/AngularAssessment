@@ -2,12 +2,20 @@
 
 .artists-search-container {
     @include center-flex(column);
+    background-color: $dark-blue-90;
+    height: 100%;
+    overflow: auto;
+
+    .loading-spinner-container {
+        height: 80%;
+    }
 
     .result-tiles-container {
         @include center-flex();
         flex-wrap: wrap;
-        margin-top: 15px;
         width: 90%;
+        height: 80%;
         margin: 0 auto;
+        margin-top: 30px;
     }
 }

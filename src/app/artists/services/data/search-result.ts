@@ -4,7 +4,7 @@ import { IArtist } from './artist';
 export type SearchIdentifierType = 'album' | 'track' | 'artist';
 
 export interface ISearchResult {
-    id: string;
+    id: number;
     readble: boolean;
     title: string;
     title_short: string;

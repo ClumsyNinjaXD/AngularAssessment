@@ -5,8 +5,8 @@
 
     .search-bar-icon-container {
         @include center-flex();
-        background-color: $crayola;
-        border: 2px solid $crayola;
+        background-color: $pink;
+        border: 2px solid $pink;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
         width: 30px;
@@ -21,6 +21,7 @@
     .search-bar-input{
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+        border: 2px solid $pink;
         padding: 0;
         padding-left: 5px;
         height: 35px;
