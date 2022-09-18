@@ -8,14 +8,11 @@ import { IArtist } from '../../services/data/artist';
   templateUrl: './artist-search.component.html',
   styleUrls: ['./artist-search.component.scss']
 })
-export class ArtistSearchComponent implements OnInit {
+export class ArtistSearchComponent {
   public searchResults: IArtist[] = [];
   public isSearching = false;
 
   constructor(private artistsService: ArtistsService, private router:Router) { }
-
-  public ngOnInit(): void {
-  }
 
   public async searchTermChanged(newValue: string): Promise<void> {
     this.isSearching = true;

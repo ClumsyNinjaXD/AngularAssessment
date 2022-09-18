@@ -22,4 +22,18 @@ describe('SearchResultTileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('getFormattedFanNumber', () => {
+    it('should format the number unit type', () => {
+      const result = component.getFormattedFanNumber(1000);
+
+      expect(result).toEqual('1K');
+    });
+
+    it('should format the number unit type', () => {
+      const result = component.getFormattedFanNumber(1000000);
+
+      expect(result).toEqual('1M');
+    });
+  });
 });

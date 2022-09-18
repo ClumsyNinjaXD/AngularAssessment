@@ -6,12 +6,9 @@ import { IArtist } from 'src/app/artists/services/data/artist';
   templateUrl: './search-result-tile.component.html',
   styleUrls: ['./search-result-tile.component.scss']
 })
-export class SearchResultTileComponent implements OnInit {
+export class SearchResultTileComponent {
   @Input() public artist: IArtist | undefined;
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   public getFormattedFanNumber(numberOfFans: number | undefined): string {
     if (numberOfFans == null) {

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 105.0.0.0 (Windows 8.1)" package="unit" timestamp="2022-09-18T15:50:34" id="0" hostname="Ninja" tests="19" errors="0" failures="0" time="0.114">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"/>
+  </properties>
+  <testcase name="SearchResultTileComponent getFormattedFanNumber should format the number unit type" time="0.047" classname="unit.SearchResultTileComponent"/>
+  <testcase name="SearchResultTileComponent getFormattedFanNumber should format the number unit type" time="0.003" classname="unit.SearchResultTileComponent"/>
+  <testcase name="SearchResultTileComponent should create" time="0.002" classname="unit.SearchResultTileComponent"/>
+  <testcase name="SearchBarComponent should create" time="0.017" classname="unit.SearchBarComponent"/>
+  <testcase name="AppComponent should create the app" time="0.003" classname="unit.AppComponent"/>
+  <testcase name="AppComponent should have as title 'musicdb-app-angular'" time="0.002" classname="unit.AppComponent"/>
+  <testcase name="ArtistDetailedViewComponent ngOnInit should call function to set up the artist details and set the artistId" time="0.013" classname="unit.ArtistDetailedViewComponent"/>
+  <testcase name="ArtistDetailedViewComponent getArtistDetails should call the services and retieve the artist details" time="0.004" classname="unit.ArtistDetailedViewComponent"/>
+  <testcase name="ArtistDetailedViewComponent getFormattedFanNumber should format the number unit type" time="0.003" classname="unit.ArtistDetailedViewComponent"/>
+  <testcase name="ArtistDetailedViewComponent getFormattedFanNumber should format the number unit type" time="0.002" classname="unit.ArtistDetailedViewComponent"/>
+  <testcase name="ArtistDetailedViewComponent should create" time="0.002" classname="unit.ArtistDetailedViewComponent"/>
+  <testcase name="LoadingSpinnerComponent should create" time="0.003" classname="unit.LoadingSpinnerComponent"/>
+  <testcase name="ArtistSearchComponent should create" time="0.005" classname="unit.ArtistSearchComponent"/>
+  <testcase name="ArtistSearchComponent searchTermChanged should call the services and retieve the artist details" time="0.002" classname="unit.ArtistSearchComponent"/>
+  <testcase name="ArtistsService should be created" time="0.001" classname="unit.ArtistsService"/>
+  <testcase name="ArtistsService getArtistById should call the api and return the results in the IArtist object type" time="0.001" classname="unit.ArtistsService"/>
+  <testcase name="ArtistsService getArtistsTopFiveTracks should call the api and return the results in the ITrack object type" time="0.001" classname="unit.ArtistsService"/>
+  <testcase name="ArtistsService getSearchResults should call the api and return the results in the IArtist object type" time="0.001" classname="unit.ArtistsService"/>
+  <testcase name="ArtistsService getArtistAlbums should call the api and return the results in the IAlbum object type" time="0.002" classname="unit.ArtistsService"/>
+  <system-out>
+    <![CDATA[Chrome 105.0.0.0 (Windows 8.1) ERROR: 'NG0303: Can't bind to 'ngModel' since it isn't a known property of 'input'.'
+,Chrome 105.0.0.0 (Windows 8.1) ERROR: 'NG0304: 'app-search-bar' is not a known element:
+1. If 'app-search-bar' is an Angular component, then verify that it is part of this module.
+2. If 'app-search-bar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Chrome 105.0.0.0 (Windows 8.1) ERROR: 'NG0304: 'app-search-bar' is not a known element:
+1. If 'app-search-bar' is an Angular component, then verify that it is part of this module.
+2. If 'app-search-bar' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>
