@@ -1,25 +1,36 @@
 <div class="artist-detailed-view-container">
     <div *ngIf="artist == null" class="no-details-found-container">
         <p>No details have been found for this artist. 
-            Please click the button below to go back and try again</p>
+            Please click the button to go back and try again
+        </p>
         <button (click)="navigateToArtistSearch()">Go Back</button>
     </div>
     <div *ngIf="artist != null" class="artist-details-container">
         <div class="artist-top-level-information">
-            <div class="search-tile-content-container">
-                <h2>{{artist.name}}</h2>
-                <p>{{artist.nb_fan}}</p>
+            <div class="tile-content-container image">
+                <button (click)="navigateToArtistSearch()" class="back-button">Go Back</button>
                 <img [src]="artist.picture_big" class="artist-picture" />
             </div>
-            <div class="search-tile-content-container">
+            <div class="tile-content-container">
+                <h1>{{artist.name}}</h1>
+                <p class="info-item"><i class="fa fa-users" aria-hidden="true"></i>{{getFormattedFanNumber(artist.nb_fan)}} fans</p>
                 <h2>Top Tracks</h2>
                 <ol class="top-track-container" >
-                    <li class="top-track" *ngFor="let track of topTracks">
-                        <span class="track-detail">{{track.title}}</span>
+                    <li class="top-track" *ngFor="let track of topTracks; let i=index;">
+                        <span class="track-detail">{{i+1 + '. ' + track.title}}</span>
                         <span class="track-detail">{{track.duration}}</span>
                     </li>
                 </ol>
                 
+            </div>
+        </div>
+        <div class="artist-bottom-level-information">
+            <h2>Albums</h2>
+            <div class="album-tiles">
+                <div *ngFor="let album of albums" class="album-tile-container">
+                    <img [src]="album.cover_medium" class="album-picture" />
+                    <p class="album-name">{{album.title}}</p>
+                </div>
             </div>
         </div>
     </div>
